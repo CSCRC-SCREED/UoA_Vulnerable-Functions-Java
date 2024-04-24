@@ -1,0 +1,120 @@
+name: Vulnerable Functions
+description: "This is the reproduction package of the paper: On the Use of Fine-grained Vulnerable Code Statements for Software Vulnerability. Investigates ML for function-level SV assessment, emphasising the importance of vulnerable statements in performance on dataset with 1,782 functions, 429 SVs, 200 projects."
+contributors:
+  name: Triet Huynh Minh Le, M. Ali Babar
+data:
+  name: combined_df_method.parquet
+  description: Vulnerable functions in Java for vulnerability assessment
+  path: ./Datasets/combined_df_method.parquet
+  format: parquet
+  size: 36,785 KB
+  fields:
+    name: file_change_id
+    description: Unique identifier for file changes.
+    name: hash
+    description: Hash value associated with the file change.s
+    name: filename
+    description: Name of the file being changed.
+    name: old_path
+    description: Original path of the file.
+    name: new_path
+    description: New path of the file after the change.
+    name: change_type
+    description: Type of change made to the file.
+    name: diff
+    description: Raw diff content showing the changes made.
+    name: diff_parsed
+    description: Parsed diff content.
+    name: num_lines_added
+    description: Number of lines added in the change.
+    name: num_lines_deleted
+    description: Number of lines deleted in the change.
+    name: code_after
+    description: Code content after the change.
+    name: code_before
+    description: Code content before the change.
+    name: nloc_file
+    description: Non-Comment Lines of Code (NLOC) in the entire file.
+    name: complexity_file
+    description: Complexity metrics for the entire file.
+    name: token_count_file
+    description: Total number of tokens in the file.
+    name: programming_language
+    description: Programming language of the file.
+    name: nloc_new
+    description: Non-Comment Lines of Code (NLOC) in the new code.
+    name: noisy_lines
+    description: Number of noisy lines in the code.
+    name: vuln_lines
+    description: Number of vulnerable lines in the code.
+    name: repo_url
+    description: URL of the repository.
+    name: author
+    description: Author of the change.
+    name: author_date
+    description: Date of authorship.
+    name: committer
+    description: Committer of the change.
+    name: committer_date
+    description: Date of commit.
+    name: msg
+    description: Commit message.
+    name: merge
+    description: Merge status.
+    name: parents
+    description: Parent commits.
+    name: cve_id
+    description: Common Vulnerabilities and Exposures (CVE) identifier.
+    name: published_date
+    description: Date of publication for CVE.
+    name: description
+    description: Description of the vulnerability.
+    name: cvss2_confidentiality_impact
+    description: Confidentiality impact in Common Vulnerability Scoring System (CVSS) v2.
+    name: cvss2_integrity_impact
+    description: Integrity impact in CVSS v2.
+    name: cvss2_availability_impact
+    description: Availability impact in CVSS v2.
+    name: cvss2_access_vector
+    description: Access vector in CVSS v2.
+    name: cvss2_access_complexity
+    description: Access complexity in CVSS v2.
+    name: cvss2_authentication
+    description: Authentication required in CVSS v2.
+    name: severity
+    description: Severity level of the vulnerability.
+    name: method_change_id
+    description: Unique identifier for method changes.
+    name: name
+    description: Name of the method.
+    name: signature
+    description: Signature of the method.
+    name: parameters
+    description: Parameters of the method.
+    name: start_line
+    description: Starting line of the method in the code.
+    name: end_line
+    description: Ending line of the method in the code.
+    name: code
+    description: Code content of the method.
+    name: nloc
+    description: Non-Comment Lines of Code (NLOC) in the method.
+    name: before_change
+    description: Code content of the method before the change.
+    name: method_vuln_lines
+    description: Number of vulnerable lines in the method.
+    name: context_lines
+    description: Number of context lines for the method.
+    name: token_count_method
+    description: Total number of tokens in the method.
+    name: method_ratio
+    description: Ratio of method change compared to the whole file change.
+    name: whole_method_change
+    description: Indicates if the entire method is changed.
+
+license:
+  name: On the Use of Fine-grained Vulnerable Code Statements for Software Vulnerability Assessment Models
+  link: https://arxiv.org/abs/2203.08417
+references:
+  name: On the Use of Fine-grained Vulnerable Code Statements for Software Vulnerability Assessment Models
+  link: https://arxiv.org/abs/2203.08417
